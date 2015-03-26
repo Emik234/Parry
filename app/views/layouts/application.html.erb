@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Parry</title>
+  <title>Smashzone</title>
+  <!-- Google font import -->
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="">
-  <script type="text/javascript"></script>
 </head>
 <body>
-	<h2>Welcome to Parry!</h2>
+		<div class='navbar navbar-default'>
+			<h3 class="logo">Smashzone!</h3>
+		</div>
+	<div class="container page-wrap">
+				
+		<% if flash[:notice] %>
+			<p class="notice"><%= notice %></p>
+		<% end %>
 
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+		<% if flash[:alert] %>
+	    	<p class="alert"><%= alert %></p>
+		<% end %>
 
-	<%= yield %>
+	
 
+		<%= yield %>
+	</div>
+	<footer class='page-footer'>
+		<h3> Follow us on <a href="mailto:w.galarza234@gmail.com"><img src="image/emaillogo.jpg" class="sociallogo"></a><br> Facebook and Twitter! </h3>
+	</footer>
 </body>
 </html>

@@ -1,0 +1,20 @@
+<div class='container-fluid'>
+	<div class='row'>
+		<div class='col-md-8'>
+			<div class="intro">
+				<h4>
+					Smashzone is a site dedicated to helping the competitive smash brothers community be more connected. With this service, you can create a user profile and find other competitive smash players in your area and challenge them to a match!
+				</h4>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-md-8'>
+			<% unless user_signed_in? %>
+				<%= render '/devise/registrations/new' %>
+			<% else %>
+				<p>The user is signed in</p>
+			<% end %>
+		</div>
+	</div>
+</div>
