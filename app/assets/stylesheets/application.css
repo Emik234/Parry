@@ -17,16 +17,10 @@
 	float: left;
 }
 
-/*.col-md-4 {
-	border-style: solid;
-	display: inline-block;
-	position: center;
-	font-family: 'Permanent Marker', cursive;
-}*/
-
 * {
   margin: 0;
 }
+
 html, body {
   height: 100%;
 }
@@ -40,27 +34,26 @@ html, body {
   /* equal to footer height */
   margin-bottom: -202px; 
 }
+
 .page-wrap:after {
   content: "";
   display: block;
 }
+
 .page-footer, .page-wrap:after {
   height: 142px; 
 }
 
-.page-footer {
-	padding: 1em;
-	font-family: 'Permanent Marker', cursive;
-	background-color: white;
-}
-
 /* Makes site mobile firendly */
-@media all and (min-width: 1300px){
 body{
 	/*background: url("ssb.jpg");*/
 	font-family: 'Permanent Marker', cursive;
 	background-color: #DAF6FF;
-	/*z-index: -1;*/
-	/*height: 900px;*/
-	}
+}
+
+.user {
+	float: left;
+	width: 300px;
+	margin-left: 20px;
+
 }

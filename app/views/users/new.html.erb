@@ -13,7 +13,7 @@
 			<% unless user_signed_in? %>
 				<%= render '/devise/registrations/new' %>
 			<% else %>
-				<p>The user is signed in</p>
+			<%= link_to 'sign out', destroy_user_session_path %>
 			<% end %>
 		</div>
 	</div>

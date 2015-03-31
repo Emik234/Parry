@@ -1,0 +1,12 @@
+<%= form_for @challenges do |f| %>
+    <%= f.label :date %>
+    <%= f.date_field :date %><br />
+    
+    <%= f.label :time %>
+    <%= f.datetime_field :time %><br />
+    
+    <%= f.label :message_box %>
+    <%= f.text_area :message_box %><br />
+    
+    <%= f.submit %>
+<% end %>

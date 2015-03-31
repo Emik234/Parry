@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  
+  get 'challenges/new'
+
+  get 'challenges/index'
+
+  get 'challenges/show'
+
+  get 'challenges/edit'
+
   devise_for :users
   root 'users#new'
 

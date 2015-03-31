@@ -13,9 +13,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-		<div class='navbar navbar-default'>
-			<h3 class="logo">Smashzone!</h3>
-		</div>
+		<nav class='navbar navbar-default'>
+			<h2 class="logo">Smashzone!</h2>
+				<div class="btn-group" role="group" aria-label="...">
+				  <button type="button" class="btn-group-lg"><%= link_to 'Home', root_path %></button>
+				  <button type="button" class="btn-group-lg"><%= link_to 'Smashers', users_path %></button>
+				  <button type="button" class="btn-group-lg"><%= link_to 'Edit Profile', edit_user_registration_path %></button>
+				  <button type="button" class="btn-group-lg"><%= link_to 'Log out', destroy_user_session_path %></button>
+				</div>
+		</nav>
 	<div class="container page-wrap">
 				
 		<% if flash[:notice] %>
@@ -26,12 +32,10 @@
 	    	<p class="alert"><%= alert %></p>
 		<% end %>
 
-	
-
 		<%= yield %>
 	</div>
-	<footer class='page-footer'>
-		<h3> Follow us on <a href="mailto:w.galarza234@gmail.com"><img src="image/emaillogo.jpg" class="sociallogo"></a><br> Facebook and Twitter! </h3>
-	</footer>
+	<nav class='navbar navbar-default navbar-fixed-bottom'>
+		<h3> Follow us on Facebook and/or Twitter! </h3>
+	</nav>
 </body>
 </html>
