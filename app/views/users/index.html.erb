@@ -1,11 +1,11 @@
 <% @users.each do |user| %>
 <div class='user well'>
-	<h3>Full name:<br/><%= user.fname %></h3>
-	<h3>Alias:<br/><%=user.alias %></h3>
-	<h3>Friend Code:<br/><%= user.ffc %></h3>
-	<h3>Nintendo Network Id:<br/><%= user.fid %></h3>
-	<div class="btn-group" role="group" aria-label="...">
-		<button type="button" class="btn-group-lg"><%= link_to 'Challenge me', challenges_new_path %></button>
-	</div>
+  <h3>Full name:<br/><%= user.fname %></h3>
+  <h3>Alias:<br/><%=user.alias %></h3>
+  <h3>Friend Code:<br/><%= user.ffc %></h3>
+  <h3>Nintendo Network Id:<br/><%= user.fid %></h3>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn-group-lg"><%= link_to 'Challenge me', challenges_new_path %></button>
+  </div>
 </div>
 <% end %>
